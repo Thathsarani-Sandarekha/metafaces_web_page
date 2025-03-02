@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="MetaFaces: A deep learning framework ensuring character consistency in multi-image visual storytelling.">
+  <meta name="keywords" content="MetaFaces, AI, Diffusion Models, Character Consistency, Image Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MetaFaces: Consistent Multi-Character Image Generation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#">Home</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More Research</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://arxiv.org/abs/YOUR_ARXIV_LINK">arXiv</a>
+          <a class="navbar-item" href="https://github.com/your-github/metafaces">Code (Coming Soon)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MetaFaces: Consistent Multi-Character Image Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Your Name<sup>1</sup>,</span>
+            <span class="author-block">Co-Author Name<sup>2</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Your University</span>,
+            <span class="author-block"><sup>2</sup>Co-Author's Institution</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <a href="./static/papers/metafaces.pdf" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+              </a>
+              <a href="https://arxiv.org/abs/YOUR_ARXIV_LINK" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+              <a href="#" class="external-link button is-normal is-rounded is-dark" disabled>
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code (Coming Soon)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <img src="./static/images/research.jpg" alt="MetaFaces Overview" style="max-width:100%;">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Abstract</h2>
+    <p>
+      MetaFaces introduces a dynamic memory mechanism into diffusion models to maintain character consistency
+      in multi-image storytelling. Our framework integrates attention maps, feature injections, and masked prompt
+      processing to ensure that characters remain visually coherent across different generations.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Examples of Multi-Character Images</h2>
+    <div class="columns is-centered is-vcentered">
+      <div class="column has-text-centered">
+        <img src="./static/images/boy1.png" alt="Example 1" style="max-width:100%;">
+        <p class="caption"><strong>Prompt:</strong> "A group of explorers discovering an ancient temple."</p>
+      </div>
+      <div class="column has-text-centered">
+        <button class="button is-dark"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="column has-text-centered">
+        <img src="./static/images/boy2.png" alt="Example 2" style="max-width:100%;">
+        <p class="caption"><strong>Prompt:</strong> "A futuristic space crew working together on a mission."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Method Overview</h2>
+    <img src="./static/images/research.jpg" alt="Method Overview" style="max-width:100%;">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Results</h2>
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>CLIP Score</th>
+          <th>DreamSim Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OneActor</td>
+          <td>0.3502</td>
+          <td>0.5215</td>
+        </tr>
+        <tr>
+          <td>MasaCtrl</td>
+          <td>0.3471</td>
+          <td>0.4375</td>
+        </tr>
+        <tr>
+          <td>ConsiStory</td>
+          <td>0.3587</td>
+          <td>0.5428</td>
+        </tr>
+        <tr>
+          <td>Make-a-Story</td>
+          <td>0.3595</td>
+          <td>0.5623</td>
+        </tr>
+        <tr>
+          <td><strong>MetaFaces</strong></td>
+          <td><strong>0.3619</strong></td>
+          <td><strong>0.5956</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Failure Cases</h2>
+    <div class="columns is-centered is-vcentered">
+      <div class="column has-text-centered">
+        <img src="./static/images/bird1.png" alt="Failure Case 1" style="max-width:100%;">
+      </div>
+      <div class="column has-text-centered">
+        <button class="button is-dark"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="column has-text-centered">
+        <img src="./static/images/fail1.png" alt="Failure Case 2" style="max-width:100%;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>This website is based on a template but adapted for MetaFaces.</p>
+      <a class="icon-link" href="https://github.com/your-github/metafaces">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
