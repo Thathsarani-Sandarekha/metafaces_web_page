@@ -93,9 +93,7 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">Abstract</h2>
     <p>
-      MetaFaces introduces a dynamic memory mechanism into diffusion models to maintain character consistency
-      in multi-image storytelling. Our framework integrates attention maps, feature injections, and masked prompt
-      processing to ensure that characters remain visually coherent across different generations.
+    Generating consistent and coherent character representations across multiple images is a critical challenge in visual storytelling, particularly in diffusion-based generative models. Existing methods often struggle to maintain characterspecific attributes and spatial consistency when transitioning between scenes. In this paper, we propose MetaFaces, a novel framework leveraging dynamic memory networks and anchordriven attention mechanisms to address this limitation. MetaFaces introduces an adaptive memory module to store and retrieve character-specific data, including anchor images and attention maps, enabling persistent representation throughout the diffusion process. By dynamically integrating attention masks into a modified UNet architecture, our approach ensures consistency in character attributes while preserving generative diversity. Additionally, MetaFaces employs advanced grounding and segmentation techniques using Grounding DINO and SAM to refine anchor masks for enhanced spatial coherence. Experimental results demonstrate significant improvements, with MetaFaces achieving the highest CLIP Score (0.3619) and DreamSim Score (0.5956) compared to state-of-the-art methods. This work establishes a new paradigm for consistent multi-image generation, with applications in storytelling, comics, and visual narrative creation.
     </p>
   </div>
 </section>
@@ -157,36 +155,36 @@
     <table class="table is-fullwidth is-bordered">
       <thead>
         <tr>
-          <th>Method</th>
-          <th>CLIP Score</th>
-          <th>DreamSim Score</th>
+          <th style="text-align:center;"><strong>Method</strong></th>
+          <th style="text-align:center;"><strong>CLIP Score</strong></th>
+          <th style="text-align:center;"><strong>DreamSim</strong></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>OneActor</td>
-          <td>0.3502</td>
-          <td>0.5215</td>
+          <td style="text-align:center;">OneActor</td>
+          <td style="text-align:center;">0.3502</td>
+          <td style="text-align:center;">0.5215</td>
         </tr>
         <tr>
-          <td>MasaCtrl</td>
-          <td>0.3471</td>
-          <td>0.4375</td>
+          <td style="text-align:center;">MasaCtrl</td>
+          <td style="text-align:center;">0.3471</td>
+          <td style="text-align:center;">0.4375</td>
         </tr>
         <tr>
-          <td>ConsiStory</td>
-          <td>0.3587</td>
-          <td>0.5428</td>
+          <td style="text-align:center;">ConsiStory</td>
+          <td style="text-align:center;">0.3587</td>
+          <td style="text-align:center;">0.5428</td>
         </tr>
         <tr>
-          <td>Make-a-Story</td>
-          <td>0.3595</td>
-          <td>0.5623</td>
+          <td style="text-align:center;">Make-a-Story</td>
+          <td style="text-align:center;">0.3595</td>
+          <td style="text-align:center;">0.5623</td>
         </tr>
         <tr>
-          <td><strong>MetaFaces</strong></td>
-          <td><strong>0.3619</strong></td>
-          <td><strong>0.5956</strong></td>
+          <td style="text-align:center;"><strong>MetaFaces (Ours)</strong></td>
+          <td style="text-align:center;"><strong>0.3619</strong></td>
+          <td style="text-align:center;"><strong>0.5956</strong></td>
         </tr>
       </tbody>
     </table>
@@ -196,15 +194,33 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Failure Cases</h2>
-    <div class="columns is-centered is-vcentered">
-      <div class="column has-text-centered">
-        <img src="./static/images/bird1.png" alt="Failure Case 1" style="max-width:100%;">
+    <div class="columns is-multiline is-centered">
+      <div class="column is-one-third has-text-centered">
+        <img src="./static/images/10.png" alt="Failure Case 1" style="max-width:100%;">
+        <p class="caption"><strong>(a)</strong> Two parrots instead of one, and the elderly woman teaching them.</p>
       </div>
-      <div class="column has-text-centered">
-        <button class="button is-dark"><i class="fas fa-arrow-right"></i></button>
+      <div class="column is-one-third has-text-centered">
+        <img src="./static/images/11.png" alt="Failure Case 2" style="max-width:100%;">
+        <p class="caption"><strong>(b)</strong> Two dogs without the boy during a hiking scene.</p>
       </div>
-      <div class="column has-text-centered">
-        <img src="./static/images/fail1.png" alt="Failure Case 2" style="max-width:100%;">
+      <div class="column is-one-third has-text-centered">
+        <img src="./static/images/12.png" alt="Failure Case 3" style="max-width:100%;">
+        <p class="caption"><strong>(c)</strong> Two dogs around the campfire, omitting the boy.</p>
+      </div>
+    </div>
+    <h2 class="title is-3">Anchor Image and Failure Cases</h2>
+    <div class="columns is-multiline is-centered">
+      <div class="column is-one-third has-text-centered">
+        <img src="./static/images/13.png" alt="Anchor Image" style="max-width:100%;">
+        <p class="caption"><strong>(a)</strong> Anchor image: The vibrant green parrot.</p>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <img src="./static/images/14.png" alt="Anchor Replication" style="max-width:100%;">
+        <p class="caption"><strong>(b)</strong> Anchor subject (green parrot) successfully replicated.</p>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <img src="./static/images/15.png" alt="Anchor Missing" style="max-width:100%;">
+        <p class="caption"><strong>(c)</strong> Anchor subject (green parrot) missing in this frame.</p>
       </div>
     </div>
   </div>
@@ -213,10 +229,29 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <p>This website is based on a template but adapted for MetaFaces.</p>
-      <a class="icon-link" href="https://github.com/your-github/metafaces">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a
+            href="https://nerfies.github.io/">Nerfies</a> project page. 
+            If you want to reuse their <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> , please credit them appropriately.
+        </div>
+      </div>
     </div>
   </div>
 </footer>
