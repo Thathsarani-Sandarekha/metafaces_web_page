@@ -102,7 +102,7 @@
         Existing methods often struggle to maintain characterspecific attributes and spatial consistency when transitioning between scenes. In this paper, we propose MetaFaces, a novel framework leveraging dynamic memory networks and anchordriven attention mechanisms to address this limitation. MetaFaces introduces an adaptive memory module to store and retrieve character-specific data, including anchor images and attention maps, enabling persistent representation throughout the diffusion process. By dynamically integrating attention masks into a modified UNet architecture, our approach ensures consistency in character attributes while preserving generative diversity.
       </p>
       <p>
-        Additionally, MetaFaces employs advanced grounding and segmentation techniques using Grounding DINO and SAM to refine anchor masks for enhanced spatial coherence. Experimental results demonstrate significant improvements, with MetaFaces achieving the highest CLIP Score (0.3619) and DreamSim Score (0.5956) compared to state-of-the-art methods. This work establishes a new paradigm for consistent multi-image generation, with applications in storytelling, comics, and visual narrative creation.
+        Additionally, MetaFaces employs advanced grounding and segmentation techniques using Grounding DINO and SAM to refine anchor masks for enhanced spatial coherence. Experimental results demonstrate significant improvements, with MetaFaces achieving the highest CLIP Score (0.3619) and DreamSim Score (0.1753) compared to state-of-the-art methods. This work establishes a new paradigm for consistent multi-image generation, with applications in storytelling, comics, and visual narrative creation.
       </p>
     </div>
   </div>
@@ -187,27 +187,27 @@
         <tr>
           <td style="text-align:center;">OneActor</td>
           <td style="text-align:center;">0.3502</td>
-          <td style="text-align:center;">0.5215</td>
+          <td style="text-align:center;">0.2415</td>
         </tr>
         <tr>
           <td style="text-align:center;">MasaCtrl</td>
           <td style="text-align:center;">0.3471</td>
-          <td style="text-align:center;">0.4375</td>
+          <td style="text-align:center;">0.2153</td>
         </tr>
         <tr>
           <td style="text-align:center;">ConsiStory</td>
           <td style="text-align:center;">0.3587</td>
-          <td style="text-align:center;">0.5428</td>
+          <td style="text-align:center;">0.1942</td>
         </tr>
         <tr>
           <td style="text-align:center;">Make-a-Story</td>
           <td style="text-align:center;">0.3595</td>
-          <td style="text-align:center;">0.5623</td>
+          <td style="text-align:center;">0.2289</td>
         </tr>
         <tr>
           <td style="text-align:center;"><strong>MetaFaces (Ours)</strong></td>
           <td style="text-align:center;"><strong>0.3619</strong></td>
-          <td style="text-align:center;"><strong>0.5956</strong></td>
+          <td style="text-align:center;"><strong>0.1753</strong></td>
         </tr>
       </tbody>
     </table>
