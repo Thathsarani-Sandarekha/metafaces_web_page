@@ -89,74 +89,38 @@
   </div>
 </section> -->
 
-<section class="hero">
+<section class="hero is-light is-small">
   <div class="hero-body">
-    <div class="container is-max-desktop has-text-centered">
-      <div id="carousel" class="carousel-container">
-        <button class="arrow left" onclick="prevImage()">&#10094;</button>
-        
-        <img id="carousel-image" src="./static/images/example/3.png" alt="MetaFaces Overview" style="max-width:100%;">
-        
-        <button class="arrow right" onclick="nextImage()">&#10095;</button>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item item-img1">
+          <img src="./static/images/example/3.png" alt="Image 1" style="width: 100%; height: auto;">
+        </div>
+
+        <div class="item item-img2">
+          <img src="./static/images/example/4.png" alt="Image 2" style="width: 100%; height: auto;">
+        </div>
+
+        <div class="item item-img3">
+          <img src="./static/images/example/5.png" alt="Image 3" style="width: 100%; height: auto;">
+        </div>
+
+        <div class="item item-img4">
+          <img src="./static/images/example/6.png" alt="Image 4" style="width: 100%; height: auto;">
+        </div>
+
+        <div class="item item-img5">
+          <img src="./static/images/example/7.png" alt="Image 5" style="width: 100%; height: auto;">
+        </div>
+
+        <div class="item item-img6">
+          <img src="./static/images/example/8.png" alt="Image 6" style="width: 100%; height: auto;">
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  .carousel-container {
-    position: relative;
-    display: inline-block;
-  }
-
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0 10px;
-    z-index: 1;
-  }
-
-  .arrow.left {
-    left: 0;
-  }
-
-  .arrow.right {
-    right: 0;
-  }
-</style>
-
-<script>
-  const images = [
-    './static/images/example/3.png',
-    './static/images/example/4.png',
-    './static/images/example/5.png',
-    './static/images/example/6.png',
-    './static/images/example/7.png',
-    './static/images/example/8.png'
-  ];
-
-  let currentIndex = 0;
-  const imageElement = document.getElementById('carousel-image');
-
-  function showImage(index) {
-    imageElement.src = images[index];
-  }
-
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-  }
-
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-  }
-</script>
 
 <!-- Abstract. -->
 <div class="columns is-centered has-text-centered">
